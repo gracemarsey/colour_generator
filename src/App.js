@@ -1,19 +1,29 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { generateColour } from "./generate_colour";
+import { useState } from "react";
+import { Counter } from "./counter";
 
-function App() {
-  console.log(generateColour());
+const App = () => {
+  const [colour, setColour] = useState(generateColour());
+
+  const onBoxClick = () => {
+    setColour(generateColour());
+  };
+
   return (
     <div
       className="App"
       style={{
-        backgroundColor: generateColour(),
-        width: "100px",
-        height: "100px",
+        backgroundColor: colour,
       }}
-    ></div>
+    >
+      <div className="box" onClick={onBoxClick}>
+        {colour}
+      </div>
+      <Counter />
+      <Counter />
+    </div>
   );
-}
+};
 
 export default App;
