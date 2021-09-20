@@ -1,5 +1,25 @@
 const generateNumber = () => {
-  return Math.floor(Math.random() * 10);
+  let letters = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "0",
+  ];
+
+  let randomNumber = Math.floor(Math.random() * 16);
+  return letters[randomNumber];
 };
 
 export const generateColour = () => {
