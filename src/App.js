@@ -16,8 +16,10 @@ const App = () => {
         backgroundColor: colour,
       }}
     >
-      <div className="box" onClick={onBoxClick}>
-        {colour}
+      <div className="box">{colour}</div>
+
+      <div className="button" onClick={onBoxClick}>
+        Click to generate colour
       </div>
     </div>
   );
